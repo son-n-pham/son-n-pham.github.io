@@ -5,10 +5,10 @@ var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
   return new bootstrap.Popover(popoverTriggerEl);
 });
 
-// Script for navbar scrollspy to work
-var scrollSpy = new bootstrap.ScrollSpy(document.body, {
-  target: '#navbar-example',
-});
+// // Script for navbar scrollspy to work
+// var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+//   target: '#navbar-example',
+// });
 
 ///////////////////////////////////////////
 // Reveal sections

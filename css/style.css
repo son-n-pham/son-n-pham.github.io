@@ -5,149 +5,34 @@ body {
 
 body {
   /* Background image for the webpage */
-  background-image: url('../img/bg_simple.png');
+  /* background-image: url('../img/bg_simple.png');
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: fixed; */
 
   /* Font for the webpage */
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: 18px;
-  line-height: 1.6em;
+  /* font-size: 18px;
+  line-height: 1.6em; */
 }
 
-.profile_img {
-  width: 10rem;
-  height: 10rem;
-  position: -webkit-sticky;
-  /* Safari */
-  position: sticky;
-  top: 3rem;
-  background-image: url('../img/eren_blur.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-}
 
-.profile_img:hover {
-  background-image: url('../img/eren_sharp.png') !important;
-}
 
 /* General format for each section */
-.section {
-  margin: 3rem auto;
-  text-align: center;
-  transition: transform 1s, opacity 1s;
-}
 
-.section {
-  transition: transform 1s, opacity 1s;
-}
 
-.section--hidden {
-  opacity: 0;
-  transform: translateY(8rem);
-}
 
-.seperator {
-  height: 7rem;
-}
+s
 
-.resume {
-  height: 100%;
-}
-/* ======== */
-/* About Me */
-/* ======== */
-.aboutMe {
-  margin: 7% auto;
-}
-
-.familyName {
-  color: teal;
-}
-
-.statement {
-  margin: 3rem auto 3rem auto;
-}
-
-.bi {
-  font-size: 3rem;
-  color: grey;
-}
-
-.bi:hover {
-  font-size: 3rem;
-  color: teal;
-}
-
-.contactWeb {
-  width: 20%;
-}
-
-/* ========= */
-/* Education */
-/* ========= */
-
-.card {
-  margin: 0 auto;
-  width: 80%;
-  text-align: center;
-}
-
-/* Changing color effect */
-/* https://codingyaar.com/bootstrap-card-hover-effect-3-background-color-change/ */
-.card {
-  border: 0;
-  border-radius: 0;
-  padding: 3em 0;
-  background-color: lightgrey;
-  color: #fff;
-}
-
-.card-icon {
-  margin: 0 1em;
-}
-
-.card-icon i {
-  font-size: 3em;
-}
-
-.card {
-  border-bottom-right-radius: 4em;
-  border-top-left-radius: 4em;
-  box-shadow: 5px 5px 10px #e1e1e1;
-}
-
-.card {
-  background: linear-gradient(to left, lightgrey 50%, teal 50%);
-}
-
-.card {
-  background-size: 200%;
-  background-position: right;
-}
-
-.card:hover {
-  background-position: left;
-}
-
-.card {
-  transition: background-position 0.5s ease-out;
-}
-
-.education p {
-  text-align: center;
-}
 /* ========= */
 /* Expertise */
 /* ========= */
 .expertise_img {
-  width: auto;
-  height: 50rem;
-  background-image: url('../img/expertise_grey.png');
-  background-size: contain;
-  background-repeat: no-repeat;
+  width: 100%;
+  height: 30%;
+  background: url('../img/expertise_grey.png') no-repeat center/contain;
+  transition: all 1s ease-out;
 }
 
 .expertise_img:hover {
@@ -162,7 +47,7 @@ body {
 }
 
 .timeline {
-  margin-top: 15%;
+  /* margin-top: 15%; */
   text-align: center;
 }
 
@@ -236,14 +121,14 @@ body {
 .btn-secondary:focus,
 .btn-secondary:active,
 .btn-secondary.active,
-.open > .dropdown-toggle.btn-secondary {
+.open>.dropdown-toggle.btn-secondary {
   background-color: teal !important;
 }
 
 /* ============== */
 /* Footer Section */
 /* ============== */
-#footer {
+/* #footer {
   padding: 7% 15%;
   margin: 15rem auto 0;
   position: relative;
@@ -263,7 +148,7 @@ body {
 
 .copyRight {
   top: 6rem;
-}
+} */
 
 /* Blockquote */
 blockquote {
@@ -379,6 +264,7 @@ blockquote p {
 .cod_history h1 {
   border-bottom: 5px solid teal;
 }
+
 .cod_img,
 .roy_img,
 .js_img {
@@ -390,6 +276,7 @@ blockquote p {
   text-align: left;
   padding-left: 0px;
 }
+
 .example {
   margin: 5% auto;
   /* padding: 5%; */
@@ -398,6 +285,7 @@ blockquote p {
   border-radius: 1rem;
   background-color: lightcyan;
 }
+
 .example-component {
   margin: 5% auto 0px auto;
   text-align: center;
