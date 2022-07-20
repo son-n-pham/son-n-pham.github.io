@@ -124,23 +124,19 @@ a {
 
 /* navbar */
 .nav {
+	font-size: 5rem;
 	top: 0;
 	width: 100vw;
 	background-color: var(--color-primary);
 	color: #fff;
-	opacity: 0.7;
-	/* height: 7vh; */
+	opacity: 0.5;
 }
 
 .nav h1,
 .nav ul {
 	margin-bottom: 0;
-	padding-top: 0.2vh;
-	padding-bottom: 0.2vh;
-}
-
-.nav h1 {
-	font-size: 3vh;
+	padding-top: 0.5vh;
+	padding-bottom: 0.5vh;
 }
 
 .nav ul {
@@ -182,12 +178,12 @@ a {
 }
 
 
-.familyName {
+.about-me__name--family {
 	color: teal;
 }
 
 .statement {
-	margin: 1rem auto 3rem auto;
+	margin: 3vw auto 3vw auto;
 }
 
 .bi {
@@ -219,6 +215,15 @@ a {
 
 .about-me__contact-icons {
 	font-size: 4vw;
+}
+
+.about-me__name h2 {
+	font-size: 3.5vw;
+}
+
+.about-me {
+	font-size: 1.5vw;
+	line-height: 1.5vw;
 }
 
 /* ========= */
@@ -269,7 +274,7 @@ a {
 .card-text {
 	text-align: center;
 	font-size: 1.3vw;
-	line-height: 1.2rem;
+	line-height: 1.5vw;
 }
 
 /* ========= */
@@ -413,8 +418,6 @@ footer {
 	#career-timeline {
 		margin: 0;
 		padding: 2vh 0;
-		/* padding-bottom: 2vh; */
-		/* padding */
 		width: 95%
 	}
 }
