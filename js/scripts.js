@@ -13,7 +13,6 @@ const activateLink = function(currentSlide) {
 		navLink.classList.remove('active')
 	});
 	
-	console.log(navLinks);
 	navLinks[currentSlide].classList.add('active');
 }
 
@@ -31,14 +30,13 @@ const slideLeft = function(e) {
   if (currentSlide < 0) currentSlide = (navLinks.length - 1);
   slideTo(currentSlide)
 }
+
 const slideRight = function(e) {
   e.preventDefault();
   currentSlide++;
   if (currentSlide > (navLinks.length - 1)) currentSlide = 0;
   slideTo(currentSlide);
 }
-
-slideTo(0);
 
 navLinksDiv.addEventListener('click', function(e){
 	e.preventDefault();
@@ -60,3 +58,6 @@ document.addEventListener('keydown', function(e) {
   if (e.key === 'ArrowLeft') slideLeft(e);
   if (e.key === 'ArrowRight') slideRight(e);
 })
+
+
+slideTo(currentSlide);
