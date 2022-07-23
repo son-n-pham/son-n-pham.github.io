@@ -266,15 +266,15 @@ a {
 }
 
 .card-title {
-	font-size: 1.5vw;
-	font-weight: 800;
+	font-size: 2vh;
+	font-weight: 600;
 	margin: 1rem 0;
 }
 
 .card-text {
 	text-align: center;
-	font-size: 1.3vw;
-	line-height: 1.5vw;
+	font-size: 1.5vh;
+	line-height: 1.7vh;
 }
 
 /* ========= */
@@ -339,15 +339,16 @@ footer {
 
 .footer__copyright {
 	margin-bottom: 1vh;
-	font-size: 0.7vw;
+	font-size: 1vh;
 }
 
 
 /* Music Bar */
 .music-container {
-	background-color: #fff;
+	background-color: var(--color-primary-light);
 	border-radius: 15px;
-	box-shadow: 0 20px 20px 0 rgba(252, 169, 169, 0.3);
+	/* box-shadow: 0 1vh 1vh 0 rgba(252, 169, 169, 0.3); */
+	/* box-shadow: 0 1vh 1vh 0 rgba(255, 255, 255, 0.3); */
 	display: flex;
 	padding: 0 2vh;
 	position: relative;
@@ -406,9 +407,9 @@ footer {
 }
 
 .action-btn {
-	background-color: #fff;
+	background-color: var(--color-primary-light);
 	border: 0;
-	color: #dfdbdf;
+	color: #fff;
 	font-size: 20px;
 	cursor: pointer;
 	padding: 10px;
@@ -416,12 +417,12 @@ footer {
 }
 
 .action-btn.action-btn-big {
-	color: #cdc2d0;
+	color: #fff;
 	font-size: 30px;
 }
 
 .music-info {
-	background-color: rgba(255, 255, 255, 0.5);
+	background-color: rgba(255, 255, 255, 0.2);
 	border-radius: 1rem 1rem 0 0;
 	position: absolute;
 	top: 0;
@@ -501,7 +502,7 @@ footer {
 
 	.nav__links {
 		flex-direction: column;
-		row-gap: 1.2vw;
+		row-gap: 0.7vw;
 		justify-content: space-between;
 		align-items: center;
 		padding-left: 0;
@@ -521,6 +522,19 @@ footer {
 
 	.about-me {
 		width: 80vw;
+	}
+
+	.about-me__contact-icons {
+		font-size: 4vh;
+	}
+
+	.about-me__name h2 {
+		font-size: 3.5vh;
+	}
+
+	.about-me {
+		font-size: 1.5vh;
+		line-height: 1.5vh;
 	}
 
 	.expertise {
