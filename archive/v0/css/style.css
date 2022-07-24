@@ -56,6 +56,7 @@ body {
 .resume {
   height: 100%;
 }
+
 /* ======== */
 /* About Me */
 /* ======== */
@@ -81,7 +82,7 @@ body {
   color: teal;
 }
 
-.contactWeb {
+.contact-link {
   width: 20%;
 }
 
@@ -139,6 +140,7 @@ body {
 .education p {
   text-align: center;
 }
+
 /* ========= */
 /* Expertise */
 /* ========= */
@@ -236,7 +238,7 @@ body {
 .btn-secondary:focus,
 .btn-secondary:active,
 .btn-secondary.active,
-.open > .dropdown-toggle.btn-secondary {
+.open>.dropdown-toggle.btn-secondary {
   background-color: teal !important;
 }
 
@@ -257,7 +259,7 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.footerContactWeb {
+.footercontact-link {
   width: 5rem;
 }
 
@@ -379,6 +381,7 @@ blockquote p {
 .cod_history h1 {
   border-bottom: 5px solid teal;
 }
+
 .cod_img,
 .roy_img,
 .js_img {
@@ -390,6 +393,7 @@ blockquote p {
   text-align: left;
   padding-left: 0px;
 }
+
 .example {
   margin: 5% auto;
   /* padding: 5%; */
@@ -398,6 +402,7 @@ blockquote p {
   border-radius: 1rem;
   background-color: lightcyan;
 }
+
 .example-component {
   margin: 5% auto 0px auto;
   text-align: center;
