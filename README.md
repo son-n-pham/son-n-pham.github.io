@@ -7,4 +7,4 @@ This is a small project from Agile Web Development course for MIT in UWA.
 - V1: It was re-designed by having web page as slides.
 - V2: 
   - Add music bar in the footer with some piano songs played by my daughters. Credit to <a href="https://www.youtube.com/channel/UCe23NIKEm6kPOnI-7pBcqsg">Violet Donut Plays</a> channel.
-  - SPW (Single Page Website) is great, but the code is starting complicated. I am exploring React.
+  - SPW (Single Page Website) is great, but the code is starting complicated. I am exploring <a href="https://github.com/son-n-pham/Learning-React">React</a>.
