@@ -332,6 +332,17 @@ footer {
 	color: #fff;
 	padding-top: 1vh;
 	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	row-gap: 0.5vh;
+}
+
+.footer__middle {
+	background-color: var(--color-primary);
+	color: #fff;
+	padding-top: 1vh;
+	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;

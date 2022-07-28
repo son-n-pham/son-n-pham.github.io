@@ -169,3 +169,40 @@ progressContainer.addEventListener('click', setProgress);
 
 // Song ends
 audio.addEventListener('ended', nextSong);
+
+//////////////////////////////////////////////////////////
+// Weather
+
+// Promisify Geolocation
+const getLocation = function () {
+  return new Promise((resolve, reject) =>
+    navigator.geolocation.getCurrentPosition(resolve, reject)
+  );
+};
+
+//
+const getWeather = async function () {
+  const key = '4ad52f617b004a10a1e71829222407';
+  const pos = await getLocation();
+  const [lat, lon] = [pos.coords.latitude, pos.coords.longitude];
+  const url = `http://api.weatherapi.com/v1/current.json?key=4ad52f617b004a10a1e71829222407&q=${lat},${lon}&aqi=yes`;
+  const currentWeatherResponse = await fetch(url);
+  const currentWeather = await currentWeatherResponse.json();
+  return {
+    location: currentWeather.location.tz_id,
+    lastUpdated: currentWeather.current.last_updated,
+    condition: currentWeather.current.condition['text'],
+    condition_icon: `https:${currentWeather.current.condition['icon']}`,
+    tempFeelsLikeC: currentWeather.current.feelslike_c,
+    uv: currentWeather.current.uv,
+    airQualityGB: currentWeather.current.air_quality['gb-defra-index'],
+  };
+};
+
+const displayWeather = async function () {
+  const weatherData = await getWeather();
+  const footerLeft = `
+  
+  
+  `;
+};
