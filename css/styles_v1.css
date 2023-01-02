@@ -258,7 +258,7 @@ a {
 	background-size: 200%;
 	background-position: right;
 	transition: background-position 0.5s ease-out;
-	min-width: 120px;
+	min-width: 18vw;
 }
 
 .card:hover {
@@ -289,12 +289,9 @@ a {
 /* Expertise */
 /* ========= */
 .expertise {
-	max-height: 700px;
-	min-height: 500px;
-	height: 80vh;
-	width: 80vw;
-	max-width: 1250px;
-	padding: 0;
+	max-width: 100%;
+	width: max-content;
+	padding: 0rem;
 }
 
 .expertise_img {
@@ -532,7 +529,7 @@ footer {
 	}
 
 	.nav ul {
-		font-size: 3vw;
+		font-size: 1rem;
 	}
 
 	.contact-icons {
@@ -557,12 +554,17 @@ footer {
 	}
 
 	.expertise {
-		height: 70%;
+		max-height: 90%;
+		max-width: 90%;
+		width: fit-content;
+		padding: 0rem;
+
+		font-size: 1rem;
 	}
 
 	.card-title,
 	.card-text {
-		font-size: .8rem;
+		font-size: 0.8rem;
 	}
 
 	/* --------------- */
