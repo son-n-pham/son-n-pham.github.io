@@ -62,14 +62,6 @@
 	height: 2rem;
 }
 
-.card__details {
-	/* position: relative;
-	display: grid;
-	grid-template-columns: 7.5rem 1fr;
-	align-items: center; */
-	/* margin: 3rem 0 0; */
-}
-
 .card__details--text-prefix {
 	font-style: normal;
 	font-weight: 700;
@@ -83,7 +75,7 @@
 }
 
 .card__header h2:hover {
-	background: linear-gradient(90deg, #ff8a00, #e52e71);
+	background: linear-gradient(90deg, #91ff00, #277a54);
 	text-shadow: none;
 	-webkit-text-fill-color: transparent;
 	-webkit-background-clip: text;
