@@ -1,5 +1,20 @@
 "use strict";
 
+// //////////////////// Navbar download resume
+const downloadResumeButton = document.querySelector('.nav__link--resume');
+downloadResumeButton.addEventListener('click', function(e) {
+  e.preventDefault();
+  const link = document.createElement('a');
+  link.href = 'docs/SON-PHAM_resume.pdf';
+  link.download = 'SON-PHAM_resume.pdf';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+});
+
+
+//////////////////////////// Slider
+
 const slides = document.querySelectorAll(".slide");
 const navLinksDiv = document.querySelector(".nav__links");
 const navLinks = document.querySelectorAll(".nav__link");
