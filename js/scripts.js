@@ -8,7 +8,7 @@ import { initPopovers } from './modules/popover.js';
 
 // Initialize all modules when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-  initNavbar();
+  // initNavbar();
   initSlider();
   initMusicPlayer();
   initWeather();

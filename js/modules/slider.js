@@ -1,6 +1,7 @@
 export const initSlider = () => {
   const slides = document.querySelectorAll('.slide');
   const navLinksDiv = document.querySelector('.nav__links');
+  console.log(navLinksDiv);
   const navLinks = document.querySelectorAll(
     '.nav__link:not(.nav__link--resume)'
   );
