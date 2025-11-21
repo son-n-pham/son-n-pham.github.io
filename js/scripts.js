@@ -6,6 +6,7 @@ import { initMusicPlayer } from "./modules/musicPlayer.js";
 import { initWeather } from "./modules/weather.js";
 import { initPopovers } from "./modules/popover.js";
 import { initFooter } from "./modules/footer.js";
+import { initTimeline } from "./modules/interactive-timeline.js";
 import slides from "./slides/slides.js";
 
 // Initialize all modules when DOM is loaded
@@ -17,6 +18,12 @@ document.addEventListener("DOMContentLoaded", () => {
     slidersContainer.innerHTML += slide;
   });
   initSlider();
+
+  // Initialize the timeline
+  const timelineCanvas = document.getElementById("timeline-canvas");
+  if (timelineCanvas) {
+    initTimeline(timelineCanvas);
+  }
 
   // Then initialize the footer
   initFooter();
