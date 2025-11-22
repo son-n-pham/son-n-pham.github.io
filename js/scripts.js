@@ -6,6 +6,7 @@ import { initMusicPlayer } from "./modules/musicPlayer.js";
 import { initWeather } from "./modules/weather.js";
 import { initPopovers } from "./modules/popover.js";
 import { initFooter } from "./modules/footer.js";
+import { initCareer3D } from "./modules/career3D.js";
 import slides from "./slides/slides.js";
 
 // Initialize all modules when DOM is loaded
@@ -17,6 +18,17 @@ document.addEventListener("DOMContentLoaded", () => {
     slidersContainer.innerHTML += slide;
   });
   initSlider();
+
+  // Initialize 3D career timeline after DOM updates
+  requestAnimationFrame(() => {
+    const careerContainer = document.getElementById('career-3d-container');
+    if (careerContainer) {
+      initCareer3D(careerContainer);
+      console.log('Career 3D initialized successfully');
+    } else {
+      console.error('Career 3D container not found');
+    }
+  });
 
   // Then initialize the footer
   initFooter();

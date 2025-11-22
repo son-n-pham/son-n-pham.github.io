@@ -228,90 +228,10 @@ const slides = [
     </div>
 `,
 `
-    <div class="slide">
+    <div class="slide slide--scroll">
       <section id="career-timeline" class="container-fluid section experience">
-        <div class="row timeline">
-          <div class="col">
-            <div class="timeline-steps aos-init aos-animate" data-aos="fade-up">
-              <div class="timeline-step">
-                <div class="timeline-content">
-                  <button type="button" class="btn-secondary inner-circle" data-bs-toggle="popover"
-                    data-bs-placement="top" data-bs-trigger="focus" title="Intern"
-                    data-bs-content="- Learn and adopt Schlumberger's QHSE&#10;- Manage inventory and ad hocly support onsite engineer"></button>
-                  <p class="h6 mt-3 mb-1">2002</p>
-                  <p class="h6 text-muted mb-0 mb-lg-0">Russia</p>
-                  <p class="h6 text-muted mb-0 mb-lg-0">Schlumberger</p>
-                </div>
-              </div>
-              <div class="timeline-step">
-                <div class="timeline-content">
-                  <button type="button" class="btn-secondary inner-circle" data-bs-toggle="popover"
-                    data-bs-placement="top" data-bs-trigger="focus" title="Business Assistant"
-                    data-bs-content="-Contract and tender support&#10;-Engineering support&#10;-Business development for Vietnam market"></button>
-                  <p class="h6 mt-3 mb-1">2005</p>
-                  <p class="h6 text-muted mb-0 mb-lg-0">Vietnam</p>
-                  <p class="h6 text-muted mb-0 mb-lg-0">Sumitomo</p>
-                </div>
-              </div>
-              <div class="timeline-step">
-                <div class="timeline-content">
-                  <button type="button" class="btn-secondary inner-circle" data-bs-toggle="popover"
-                    data-bs-placement="top" data-bs-trigger="focus" title="Jr. Reservoir Engineer"
-                    data-bs-content="- Monitor, analyse and forecast well performances&#10;- Manage database for oil-production wells&#10;- Coordinate to resolve daily production operation issues and prepare production reports for company and partners"></button>
-                  <p class="h6 mt-3 mb-1">2005</p>
-                  <p class="h6 text-muted mb-0 mb-lg-0">Vietnam</p>
-                  <p class="h6 text-muted mb-0 mb-lg-0">
-                    Japan Vietnam Petroleum Company (JVPC)
-                  </p>
-                </div>
-              </div>
-              <div class="timeline-step">
-                <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title=""
-                  data-content="" data-original-title="">
-                  <button type="button" class="btn-secondary inner-circle" data-bs-toggle="popover"
-                    data-bs-placement="top" data-bs-trigger="focus" title="Sales Manager"
-                    data-bs-content="- Manage P&L, HR, inventory Account and sales management&#10;- Application engineering&#10;- Mentoring employees"></button>
-                  <p class="h6 mt-3 mb-1">2008</p>
-                  <p class="h6 text-muted mb-0 mb-lg-0">Vietnam</p>
-                  <p class="h6 text-muted mb-0 mb-lg-0">Baker Hughes</p>
-                </div>
-              </div>
-              <div class="timeline-step mb-0">
-                <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title=""
-                  data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2020">
-                  <button type="button" class="btn-secondary inner-circle" data-bs-toggle="popover"
-                    data-bs-placement="top" data-bs-trigger="focus" title="Designer & Application Engineer"
-                    data-bs-content="- PDC designer&#10;- DART application engineer for Asia Pacific and Africa"></button>
-                  <p class="h6 mt-3 mb-1">2012</p>
-                  <p class="h6 text-muted mb-0 mb-lg-0">USA</p>
-                  <p class="h6 text-muted mb-0 mb-lg-0">Baker Hughes</p>
-                </div>
-              </div>
-              <div class="timeline-step mb-0">
-                <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title=""
-                  data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2020">
-                  <button type="button" class="btn-secondary inner-circle" data-bs-toggle="popover"
-                    data-bs-placement="top" data-bs-trigger="focus" title="Account Manager"
-                    data-bs-content="- Account and sales management for key offshore customers&#10;- Design PDC for Australia&#10;- Be the technical lead and mentor team members"></button>
-                  <p class="h6 mt-3 mb-1">2014</p>
-                  <p class="h6 text-muted mb-0 mb-lg-0">Australia</p>
-                  <p class="h6 text-muted mb-0 mb-lg-0">Baker Hughes</p>
-                </div>
-              </div>
-              <div class="timeline-step mb-0">
-                <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title=""
-                  data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2020">
-                  <button type="button" class="btn-secondary inner-circle" data-bs-toggle="popover"
-                    data-bs-placement="top" data-bs-trigger="focus" title="APAC Engineering Manager"
-                    data-bs-content="- Engineering management for Drill Bit operation in APAC&#10;- Design PDC for key applications in the region&#10;- Mentor and support team members across the region&#10;- Work closely with other product lines for new market/opportunity in the region"></button>
-                  <p class="h6 mt-3 mb-1">2016</p>
-                  <p class="h6 text-muted mb-0 mb-lg-0">Australia - APAC</p>
-                  <p class="h6 text-muted mb-0 mb-lg-0">Baker Hughes</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div id="career-3d-container" class="career-3d-container"></div>
+        <div class="scroll-spacer" style="height: 400vh;"></div>
       </section>
     </div>
 `
