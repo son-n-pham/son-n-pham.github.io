@@ -10,7 +10,7 @@ const slides = [
             </h2>
             <div class="about-me__contact">
               South Perth, Western Australia | +61 439 022 252 |
-              son.pham2@bakerhughes.com
+              phamsonn@gmail.com
             </div>
           </div>
 
