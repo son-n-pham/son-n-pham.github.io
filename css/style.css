@@ -1276,6 +1276,11 @@ a {
     justify-content: flex-end;
     align-items: center;
     z-index: 10;
+    pointer-events: none; /* Allow clicks to pass through to music player */
+}
+
+.footer__right > * {
+    pointer-events: auto; /* Re-enable clicks for child widgets */
 }
 
 /* Time Zone Widget */
