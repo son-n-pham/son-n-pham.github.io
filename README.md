@@ -8,3 +8,4 @@ This is a small project from Agile Web Development course for MIT in UWA.
 - V2: 
   - Add music bar in the footer with some piano songs played by my daughters. Credit to <a href="https://www.youtube.com/channel/UCe23NIKEm6kPOnI-7pBcqsg">Violet Donut Plays</a> channel.
   - SPW (Single Page Website) is great, but the code is starting complicated. I am exploring <a href="https://github.com/son-n-pham/Learning-React">React</a>.
+- V3: Refactor with AntiGravity and Github Copilot

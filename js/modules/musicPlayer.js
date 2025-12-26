@@ -17,9 +17,9 @@ export const initMusicPlayer = () => {
   // Functions
   const loadSong = (songId) => {
     const song = songList[songId];
-    title.innerText = song.title;
-    audio.src = `music/${song.file}.mp3`;
-    cover.src = `img/music_${song.file}.jpg`;
+    if (title) title.innerText = song.title;
+    if (audio) audio.src = `music/${song.file}.mp3`;
+    if (cover) cover.src = `img/music_${song.file}.jpg`;
   };
 
   const playSong = () => {

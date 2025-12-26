@@ -120,24 +120,41 @@ let weatherUpdateInterval;
 const displayWeather = async function () {
   try {
     const weatherData = await getWeather();
+    // Extract city name from timezone (e.g., "Australia/Perth" -> "Perth")
+    const locationParts = weatherData.location.split('/');
+    const cityName = locationParts[locationParts.length - 1].replace(/_/g, ' ');
+    
+    // Format last updated time
+    const lastUpdatedDate = new Date(weatherData.lastUpdated);
+    const formattedTime = lastUpdatedDate.toLocaleTimeString('en-AU', {
+      hour: 'numeric',
+      minute: '2-digit',
+      hour12: true
+    });
+    
     const footerLeft = document.querySelector('.footer__left');
     footerLeft.innerHTML = `
-      <div class="weather-info">
-        <img src="${weatherData.condition_icon}" alt="${
-      weatherData.condition
-    }" class="weather-icon">
+      <div class="weather-widget" id="weather-widget">
+        <div class="weather-location">
+          <i class="fas fa-map-marker-alt"></i>
+          <span id="weather-location">${cityName}</span>
+        </div>
         <div class="weather-details">
-          <p>${weatherData.location}</p>
-          <p>${weatherData.condition}, ${weatherData.tempFeelsLikeC}°C</p>
-          <p>UV: ${weatherData.uv}, Air Quality: ${weatherData.airQualityGB}</p>
-          <p>Last updated: ${new Date().toLocaleTimeString()}</p>
+          <span id="weather-condition">${weatherData.condition}</span>, <span id="weather-temp">${weatherData.tempFeelsLikeC}°C</span>
+        </div>
+        <div class="weather-extra">
+          <span>UV: <span id="weather-uv">${weatherData.uv}</span></span>
+          <span>Air Quality: <span id="weather-aqi">${weatherData.airQualityGB}</span></span>
+        </div>
+        <div class="weather-updated">
+          Last updated: <span id="weather-updated">${formattedTime}</span>
         </div>
       </div>
     `;
   } catch (error) {
     console.error('Error fetching weather data:', error);
     const footerLeft = document.querySelector('.footer__left');
-    footerLeft.innerHTML = '<p>Weather data unavailable</p>';
+    footerLeft.innerHTML = '<p class="weather-error">Weather data unavailable</p>';
   }
 };
 const startWeatherUpdates = function () {

@@ -1,28 +1,20 @@
 "use strict";
 
-import { initNavbar } from "./modules/navbar.js";
 import { initSlider } from "./modules/slider.js";
 import { initMusicPlayer } from "./modules/musicPlayer.js";
+import { initTheme } from "./modules/theme.js";
 import { initWeather } from "./modules/weather.js";
-import { initPopovers } from "./modules/popover.js";
-import { initFooter } from "./modules/footer.js";
-import slides from "./slides/slides.js";
+import { init as initExpertise } from "./modules/expertise.js";
+import { initTimeline } from "./modules/timeline.js";
+import { initTimezone } from "./modules/timezone.js";
 
 // Initialize all modules when DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
-  // First initialize the navbar and slides
-  initNavbar();
-  const slidersContainer = document.querySelector(".container__main.sliders");
-  slides.forEach((slide) => {
-    slidersContainer.innerHTML += slide;
-  });
+  initTheme();
   initSlider();
-
-  // Then initialize the footer
-  initFooter();
-
-  // Finally initialize components that depend on footer
   initMusicPlayer();
   initWeather();
-  initPopovers();
+  initExpertise();
+  initTimeline();
+  initTimezone();
 });

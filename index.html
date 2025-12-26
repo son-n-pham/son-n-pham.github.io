@@ -1,50 +1,417 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-    <!-- Setup viewport -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- This meta for websearch -->
-    <meta name="description" content="Son Pham resume" />
-    <meta
-      name="keywords"
-      content="son pham, resume, cv, web development, petroleum, geology, software development"
-    />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Son Pham - Resume & Portfolio">
     <title>Son Pham</title>
-    <link rel="icon" type="image/x-icon" href="img/favicon_son-pham.png" />
-
-    <!-- Font awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
-    />
-
-    <!-- For using bootstrap 5 -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    />
-
-    <!-- Refer to style.css -->
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" type="text/css" href="css/card.css" />
+    <link rel="icon" type="image/x-icon" href="img/favicon_son-pham.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Scripts -->
     <script defer type="module" src="./js/scripts.js"></script>
-  </head>
+</head>
+<body data-theme="light">
+    <div class="bg-container">
+        <div class="bg-image"></div>
+        <div class="bg-overlay"></div>
+        <!-- Flashing Stars -->
+        <div class="stars-container">
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+        </div>
+    </div>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav__container">
+                <a href="#about-me" class="nav__logo">
+                    <img src="img/logo_SonPham.png" alt="" class="nav__logo-img">
+                    <span>SON PHAM</span>
+                </a>
+                <ul class="nav__links">
+                    <li><a href="#about-me" class="nav__link" data-slide="0">About Me</a></li>
+                    <li><a href="#education" class="nav__link" data-slide="1">Education</a></li>
+                    <li><a href="#expertise" class="nav__link" data-slide="2">Expertise</a></li>
+                    <li><a href="#career-timeline" class="nav__link" data-slide="3">Career Timeline</a></li>
+                    <li><a href="docs/SON-PHAM_resume.pdf" class="nav__link nav__link--cta" download>Download Resume</a></li>
+                    <li><button class="theme-toggle" aria-label="Toggle theme" title="Toggle theme"><i class="fas fa-moon"></i></button></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-  <body>
-    <div class="container__main sliders"></div>
-    <!-- Bootstrap JavaScript plugin and dependency -->
-    <button class="slider__btn slider__btn--left">&larr;</button>
-    <button class="slider__btn slider__btn--right">&rarr;</button>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+    <main class="main-content">
+        <button class="slider__btn slider__btn--left" aria-label="Previous slide" title="Previous slide">&larr;</button>
+        <button class="slider__btn slider__btn--right" aria-label="Next slide" title="Next slide">&rarr;</button>
+        
+        <div class="slider-container">
+            <!-- Slide 1: About Me -->
+            <section id="about-me" class="section slide active">
+                <div class="section__content about-me__card">
+                    <div class="about-me__header">
+                        <h2>Son <span class="text-highlight">Pham</span></h2>
+                        <p class="about-me__contact">South Perth, Western Australia | +61 439 022 252 | phamsonn@gmail.com</p>
+                    </div>
+                    <div class="about-me__statement">
+                        <p>A team-oriented, responsible, diligent, quick-learning, creative, and adaptable employee.</p>
+                        <p>I enjoy automating processes and developing tools for myself, colleagues, and customers to boost productivity, efficiency, and save both time and costs.</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/son-n-pham/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/son-n-pham" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://hub.docker.com/u/phamsonn" target="_blank" rel="noopener" aria-label="Docker"><i class="fab fa-docker"></i></a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 2: Education -->
+            <section id="education" class="section slide">
+                <h2 class="section__title">Education</h2>
+                <div class="cards-grid">
+                    <article class="card">
+                        <div class="card__icon">
+                            <img src="img/edu_HCMUT.png" alt="HCMUT Logo">
+                        </div>
+                        <div class="card__content">
+                            <h3>HCMC University of Technology</h3>
+                            <p>BSc. Petroleum Geology (2000-2005)</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card__icon">
+                            <img src="img/edu_UWA.jpg" alt="UWA Logo">
+                        </div>
+                        <div class="card__content">
+                            <h3>University of Western Australia</h3>
+                            <p>Master of Information Technology (2021 - 2023)</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Slide 3: Expertise -->
+            <section id="expertise" class="section slide">
+                <h2 class="section__title">Expertise</h2>
+                <div class="expertise-scroll">
+                    <!-- Data Science Card -->
+                    <article class="expertise-card">
+                        <div class="expertise-card__inner">
+                            <div class="expertise-card__front">
+                                <img src="img/expertise_data-science.png" alt="" class="expertise-card__icon">
+                                <h3>Data Science</h3>
+                            </div>
+                            <div class="expertise-card__back">
+                                <h3>Data Science</h3>
+                                <p>My whole career is relating to data analytics with the data of geology, reservoir engineering, geological model, drilling and drill bits.</p>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Software Development & Cloud Card -->
+                    <article class="expertise-card">
+                        <div class="expertise-card__inner">
+                            <div class="expertise-card__front">
+                                <div class="icon-group">
+                                    <img src="img/expertise_software.png" alt="" class="expertise-card__icon">
+                                    <img src="img/expertise_cloud.png" alt="" class="expertise-card__icon">
+                                </div>
+                                <h3>Software Dev & Cloud</h3>
+                            </div>
+                            <div class="expertise-card__back">
+                                <h3>Software Development & Cloud</h3>
+                                <p>Web programming is my current focus with the main programming languages of Python, Javascript, and various modern serverless technologies.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Petroleum Geology Card -->
+                    <article class="expertise-card">
+                        <div class="expertise-card__inner">
+                            <div class="expertise-card__front">
+                                <img src="img/expertise_geology.png" alt="" class="expertise-card__icon">
+                                <h3>Petroleum Geology</h3>
+                            </div>
+                            <div class="expertise-card__back">
+                                <h3>Petroleum Geology</h3>
+                                <p>I studied BSc Petroleum Geology in Vietnam and also had 2 years of researching on geological modelling and reservoir flow simulation.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Drilling Engineering Card -->
+                    <article class="expertise-card">
+                        <div class="expertise-card__inner">
+                            <div class="expertise-card__front">
+                                <img src="img/expertise_rig.png" alt="" class="expertise-card__icon">
+                                <h3>Drilling Engineering</h3>
+                            </div>
+                            <div class="expertise-card__back">
+                                <h3>Drilling Engineering</h3>
+                                <p>I started working for Baker Hughes Drill Bits since year 2008 in several positions, and application engineering is my backbone.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- PDC Design Card -->
+                    <article class="expertise-card">
+                        <div class="expertise-card__inner">
+                            <div class="expertise-card__front">
+                                <img src="img/expertise_pdc.png" alt="" class="expertise-card__icon">
+                                <h3>PDC Design</h3>
+                            </div>
+                            <div class="expertise-card__back">
+                                <h3>PDC Design</h3>
+                                <p>My curiosity and desire to exceed customers' expectation extends to mechanical engineering work by designing PDC bits.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Technical Sales Card -->
+                    <article class="expertise-card">
+                        <div class="expertise-card__inner">
+                            <div class="expertise-card__front">
+                                <img src="img/expertise_people.png" alt="" class="expertise-card__icon">
+                                <h3>Technical Sales</h3>
+                            </div>
+                            <div class="expertise-card__back">
+                                <h3>Technical Sales</h3>
+                                <p>I started working for Baker Hughes as an account manager in Vietnam, and then expanded my technical sales and account management to customers across Asia Pacific.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Root-Cause Analysis Card -->
+                    <article class="expertise-card">
+                        <div class="expertise-card__inner">
+                            <div class="expertise-card__front">
+                                <img src="img/expertise_analyze.png" alt="" class="expertise-card__icon">
+                                <h3>Root-Cause Analysis</h3>
+                            </div>
+                            <div class="expertise-card__back">
+                                <h3>Root-Cause Analysis</h3>
+                                <p>I have been doing RCA since the beginning of the career, and the skill is sharpened drastically over time.</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Slide 4: Timeline -->
+            <section id="career-timeline" class="section slide">
+                <h2 class="section__title">Career Timeline</h2>
+                <div class="timeline-container">
+                    <div class="timeline__track">
+                        <div class="timeline__line"></div>
+                    </div>
+                    <div class="timeline">
+                        <div class="timeline__item" data-index="0">
+                            <div class="timeline__info">
+                                <div class="timeline__date">2002</div>
+                                <div class="timeline__loc">Russia</div>
+                                <div class="timeline__org">Schlumberger</div>
+                            </div>
+                            <button class="timeline__marker" aria-label="Intern: Schlumberger" title="Show details">
+                                <span class="timeline__marker-inner"></span>
+                            </button>
+                            <div class="timeline__expandable">
+                                <div class="timeline__details">
+                                    <h4>Intern</h4>
+                                    <p>Learn and adopt Schlumberger's QHSE</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline__item" data-index="1">
+                            <div class="timeline__info">
+                                <div class="timeline__date">2005</div>
+                                <div class="timeline__loc">Vietnam</div>
+                                <div class="timeline__org">Sumitomo</div>
+                            </div>
+                            <button class="timeline__marker" aria-label="Business Assistant: Sumitomo" title="Show details">
+                                <span class="timeline__marker-inner"></span>
+                            </button>
+                            <div class="timeline__expandable">
+                                <div class="timeline__details">
+                                    <h4>Business Assistant</h4>
+                                    <p>Contract and tender support</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline__item" data-index="2">
+                            <div class="timeline__info">
+                                <div class="timeline__date">2005</div>
+                                <div class="timeline__loc">Vietnam</div>
+                                <div class="timeline__org">JVPC</div>
+                            </div>
+                            <button class="timeline__marker" aria-label="Jr. Reservoir Engineer: JVPC" title="Show details">
+                                <span class="timeline__marker-inner"></span>
+                            </button>
+                            <div class="timeline__expandable">
+                                <div class="timeline__details">
+                                    <h4>Jr. Reservoir Engineer</h4>
+                                    <p>Monitor, analyse and forecast well performances</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline__item" data-index="3">
+                            <div class="timeline__info">
+                                <div class="timeline__date">2008</div>
+                                <div class="timeline__loc">Vietnam</div>
+                                <div class="timeline__org">Baker Hughes</div>
+                            </div>
+                            <button class="timeline__marker" aria-label="Sales Manager: Baker Hughes" title="Show details">
+                                <span class="timeline__marker-inner"></span>
+                            </button>
+                            <div class="timeline__expandable">
+                                <div class="timeline__details">
+                                    <h4>Sales Manager</h4>
+                                    <p>Manage P&L, HR, inventory</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline__item" data-index="4">
+                            <div class="timeline__info">
+                                <div class="timeline__date">2012</div>
+                                <div class="timeline__loc">USA</div>
+                                <div class="timeline__org">Baker Hughes</div>
+                            </div>
+                            <button class="timeline__marker" aria-label="Designer & Application Engineer: Baker Hughes" title="Show details">
+                                <span class="timeline__marker-inner"></span>
+                            </button>
+                            <div class="timeline__expandable">
+                                <div class="timeline__details">
+                                    <h4>Designer & Application Engineer</h4>
+                                    <p>PDC designer</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline__item" data-index="5">
+                            <div class="timeline__info">
+                                <div class="timeline__date">2014</div>
+                                <div class="timeline__loc">Australia</div>
+                                <div class="timeline__org">Baker Hughes</div>
+                            </div>
+                            <button class="timeline__marker" aria-label="Account Manager: Baker Hughes" title="Show details">
+                                <span class="timeline__marker-inner"></span>
+                            </button>
+                            <div class="timeline__expandable">
+                                <div class="timeline__details">
+                                    <h4>Account Manager</h4>
+                                    <p>Account and sales management</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline__item" data-index="6" data-current="true">
+                            <div class="timeline__info">
+                                <div class="timeline__date">2016</div>
+                                <div class="timeline__loc">APAC</div>
+                                <div class="timeline__org">Baker Hughes</div>
+                            </div>
+                            <button class="timeline__marker" aria-label="APAC Engineering Manager: Baker Hughes" title="Show details">
+                                <span class="timeline__marker-inner"></span>
+                            </button>
+                            <div class="timeline__expandable">
+                                <div class="timeline__details">
+                                    <h4>APAC Engineering Manager</h4>
+                                    <p>Engineering management for Drill Bit operation</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__left">
+                <div class="weather-widget" id="weather-widget">
+                    <div class="weather-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span id="weather-location">South Perth</span>
+                    </div>
+                    <div class="weather-details">
+                        <span id="weather-condition">Partly cloudy</span>, <span id="weather-temp">--°C</span>
+                    </div>
+                    <div class="weather-extra">
+                        <span>UV: <span id="weather-uv">--</span></span>
+                        <span>Air Quality: <span id="weather-aqi">--</span></span>
+                    </div>
+                    <div class="weather-updated">
+                        Last updated: <span id="weather-updated">--</span>
+                    </div>
+                </div>
+            </div>
+            <div class="music-player" id="music-container">
+                <img src="img/music_Comptine.jpg" alt="Album Cover" id="cover" class="music-cover">
+                <div class="music-info">
+                    <h4 id="title">Comptine d'un autre été</h4>
+                    <div class="progress-container" id="progress-container">
+                        <div class="progress" id="progress"></div>
+                    </div>
+                </div>
+                <audio src="./music/Comptine.mp3" id="audio"></audio>
+                <div class="music-controls">
+                    <button id="prev" class="control-btn" aria-label="Previous song" title="Previous song"><i class="fas fa-backward"></i></button>
+                    <button id="play" class="control-btn play-btn" aria-label="Play/Pause" title="Play/Pause"><i class="fas fa-play"></i></button>
+                    <button id="next" class="control-btn" aria-label="Next song" title="Next song"><i class="fas fa-forward"></i></button>
+                </div>
+            </div>
+            <div class="footer__right">
+                <!-- Time Zone Widget Container -->
+                <div class="tz-container">
+                    <button id="tz-trigger" class="tz-button">
+                        🌍 Check Time Zone <span class="arrow">▲</span>
+                    </button>
+                    
+                    <!-- The Dropdown Menu (Hidden by default) -->
+                    <div id="tz-dropdown" class="tz-dropdown">
+                        <!-- Javascript will populate list items here -->
+                    </div>
+                </div>
+            </div>
+            <p class="copyright">Copyright &copy; Son Pham All rights reserved.</p>
+        </div>
+    </footer>
+</body>
 </html>

@@ -2,7 +2,7 @@ export const initSlider = () => {
   const slides = document.querySelectorAll('.slide');
   const navLinksDiv = document.querySelector('.nav__links');
   const navLinks = document.querySelectorAll(
-    '.nav__link:not(.nav__link--resume)'
+    '.nav__link:not(.nav__link--cta)'
   );
   const btnSlideLeft = document.querySelector('.slider__btn--left');
   const btnSlideRight = document.querySelector('.slider__btn--right');
@@ -13,7 +13,7 @@ export const initSlider = () => {
     navLinks.forEach((navLink) => navLink.classList.remove('active'));
     if (
       navLinks[currentSlide] &&
-      !navLinks[currentSlide].classList.contains('nav__link--resume')
+      !navLinks[currentSlide].classList.contains('nav__link--cta')
     ) {
       navLinks[currentSlide].classList.add('active');
     }
@@ -42,7 +42,7 @@ export const initSlider = () => {
   navLinksDiv.addEventListener('click', (e) => {
     if (
       e.target.classList.contains('nav__link') &&
-      !e.target.classList.contains('nav__link--resume')
+      !e.target.classList.contains('nav__link--cta')
     ) {
       e.preventDefault();
       currentSlide = parseInt(e.target.dataset.slide);
