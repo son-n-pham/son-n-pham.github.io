@@ -1846,3 +1846,176 @@ a {
         opacity: 0.5;
     }
 }
+
+/* Bottom Navigation Tabs */
+:root {
+    --bottom-nav-height: 60px;
+}
+
+.bottom-nav {
+    display: none; /* Hidden by default (Desktop) */
+    position: fixed;
+    bottom: var(--footer-height);
+    left: 0;
+    width: 100%;
+    height: var(--bottom-nav-height);
+    z-index: 90;
+    justify-content: center;
+    padding: 0;
+    pointer-events: none;
+}
+
+.bottom-nav__links {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    background: var(--glass-dark-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 0.5rem 1rem;
+    border-radius: 20px 20px 0 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: none;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+    pointer-events: auto;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.bottom-nav__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    padding: 0.5rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.8rem;
+    text-align: center;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+}
+
+.bottom-nav__link i {
+    font-size: 1.2rem;
+    margin-bottom: 2px;
+    transition: transform 0.3s ease;
+}
+
+.bottom-nav__link span {
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
+/* Hover & Active States */
+.bottom-nav__link:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.bottom-nav__link.active {
+    color: var(--color-secondary);
+    background: rgba(255, 255, 255, 0.1); /* Subtle bg */
+    box-shadow: inset 0 0 10px rgba(26, 188, 156, 0.05);
+}
+
+.bottom-nav__link.active i {
+    transform: translateY(-2px);
+    color: var(--color-secondary);
+}
+
+.bottom-nav__link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: var(--color-secondary);
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+    border-radius: 3px;
+}
+
+.bottom-nav__link.active::after {
+    width: 50%;
+}
+
+/* Header Adjustments for new layout */
+.nav__controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .bottom-nav {
+        display: flex; /* Show on mobile */
+    }
+
+    /* Hide desktop nav links on mobile */
+    .header .nav__links {
+        display: none !important;
+    }
+
+    /* Force Header Row Layout */
+    .nav__container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        gap: 0.5rem;
+    }
+
+    .nav__logo {
+        width: auto;
+        justify-content: flex-start;
+        font-size: 1.2rem;
+        margin: 0;
+    }
+
+    .nav__controls {
+        gap: 0.75rem;
+    }
+    
+    /* Hide 'Download Resume' text on very small screens if needed, or keep as icon? 
+       User said keep it right. Assuming it fits or scales. 
+       Actually, standard 'nav__link--cta' might be too big. 
+       Let's minimalize padding if needed, but flex-row helps.
+    */
+
+    /* Bottom Nav Styles overrides for mobile strip */
+    .bottom-nav__links {
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+        gap: 0;
+        padding: 0.25rem 0;
+    }
+
+    /* Adjust Main Content Height */
+    :root {
+        --header-height: 70px; /* Reduced header height since links are gone */
+        /* Footer height is already ~140px on mobile */
+    }
+
+    .main-content {
+        /* Calculate height: Viewport - Header - Footer - Bottom Nav */
+        height: calc(100dvh - var(--header-height) - var(--footer-height) - var(--bottom-nav-height));
+        margin-top: var(--header-height);
+        /* No extra padding needed at bottom since Bottom Nav is outside main content flow (visually) 
+           BUT wait, Bottom Nav is FIXED at bottom: footer-height. 
+           So it sits on top of where main content WOULD be if it went down to proper footer.
+           The 'footer' is fixed bottom:0.
+           The 'bottom-nav' is fixed bottom: footer-height.
+           So they stack.
+           Main content starts at top + header-height.
+           Ended at? We want it to end at bottom-nav top.
+        */
+    }
+}

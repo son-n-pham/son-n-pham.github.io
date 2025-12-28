@@ -1,33 +1,33 @@
 export const initSlider = () => {
   const slides = document.querySelectorAll('.slide');
-  const navLinksDiv = document.querySelector('.nav__links');
-  const navLinks = document.querySelectorAll(
-    '.nav__link:not(.nav__link--cta)'
-  );
   const btnSlideLeft = document.querySelector('.slider__btn--left');
   const btnSlideRight = document.querySelector('.slider__btn--right');
   const sliderContainer = document.querySelector('.slider-container');
 
+  // Select all navigation links (Desktop + Mobile) that control slides
+  const allNavLinks = document.querySelectorAll('[data-slide]');
+
   let currentSlide = 0;
 
   const activateLink = (currentSlide) => {
-    navLinks.forEach((navLink) => navLink.classList.remove('active'));
-    if (
-      navLinks[currentSlide] &&
-      !navLinks[currentSlide].classList.contains('nav__link--cta')
-    ) {
-      const activeLink = navLinks[currentSlide];
-      activeLink.classList.add('active');
-      
-      // Scroll active tab into view on mobile
-      if (window.innerWidth <= 768) {
-        activeLink.scrollIntoView({ 
+    // Deactivate all first
+    allNavLinks.forEach((link) => link.classList.remove('active'));
+
+    // Activate links matching the current slide index
+    const matchingLinks = document.querySelectorAll(`[data-slide="${currentSlide}"]`);
+    
+    matchingLinks.forEach(link => {
+      link.classList.add('active');
+
+      // Scroll active tab into view on mobile (only for bottom nav links)
+      if (window.innerWidth <= 768 && link.classList.contains('bottom-nav__link')) {
+        link.scrollIntoView({ 
           behavior: 'smooth', 
           inline: 'center', 
           block: 'nearest' 
         });
       }
-    }
+    });
   };
 
   const slideTo = (currentSlide) => {
@@ -38,12 +38,12 @@ export const initSlider = () => {
   };
 
   const nextSlide = () => {
-    currentSlide = (currentSlide + 1) % navLinks.length;
+    currentSlide = (currentSlide + 1) % 4; // Hardcoded 4 slides based on HTML
     slideTo(currentSlide);
   };
 
   const prevSlide = () => {
-    currentSlide = (currentSlide - 1 + navLinks.length) % navLinks.length;
+    currentSlide = (currentSlide - 1 + 4) % 4;
     slideTo(currentSlide);
   };
 
@@ -89,11 +89,10 @@ export const initSlider = () => {
     }
   };
 
-  // Event Listeners
-  navLinksDiv.addEventListener('click', (e) => {
-    // Handle click on the link or its children (if any)
-    const link = e.target.closest('.nav__link');
-    if (link && !link.classList.contains('nav__link--cta')) {
+  // Event Listeners - Global Delegation for Nav Links
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('[data-slide]');
+    if (link) {
       e.preventDefault();
       currentSlide = parseInt(link.dataset.slide);
       slideTo(currentSlide);
