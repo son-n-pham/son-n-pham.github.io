@@ -20,5 +20,11 @@ export function init() {
         });
     }, observerOptions);
 
-    cards.forEach(card => observer.observe(card));
+    cards.forEach(card => {
+        observer.observe(card);
+        card.addEventListener('click', () => {
+             card.classList.toggle('flipped');
+        });
+    });
 }
+

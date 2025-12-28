@@ -135,9 +135,7 @@ a {
     background: var(--glass-dark-bg);
     backdrop-filter: var(--glass-blur);
     -webkit-backdrop-filter: var(--glass-blur);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     z-index: 100;
-    box-shadow: var(--shadow);
 }
 
 .nav__container {
@@ -197,10 +195,14 @@ a {
 }
 
 .nav__link--cta {
-    background-color: var(--color-secondary);
+    background: linear-gradient(135deg, var(--color-secondary) 0%, #1ABC9C 100%);
     color: var(--color-white) !important;
-    padding: 0.5rem 1rem;
-    border-radius: var(--border-radius);
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(26, 188, 156, 0.3);
+    font-weight: 600;
+    border: none;
+    letter-spacing: 0.5px;
 }
 
 .nav__link--cta:hover {
@@ -452,7 +454,7 @@ a {
     transform-style: preserve-3d;
 }
 
-.expertise-card:hover .expertise-card__inner {
+.expertise-card.flipped .expertise-card__inner {
     transform: rotateY(180deg);
 }
 
@@ -598,7 +600,8 @@ a {
     text-align: center;
 }
 
-/* Hover glow effect */
+/* Hover glow effect removed as per user request */
+/*
 .expertise-card::before {
     content: '';
     position: absolute;
@@ -627,6 +630,7 @@ a {
     0%, 100% { opacity: 0.3; }
     50% { opacity: 0.6; }
 }
+*/
 
 /* Dark mode adjustments */
 [data-theme="dark"] .expertise-card__front {
@@ -1488,6 +1492,7 @@ a {
     .header {
         height: auto;
         padding-bottom: 0px;
+        background: rgba(0, 0, 0, 0.9);
     }
 
     .nav__container {
@@ -1540,20 +1545,22 @@ a {
     }
 
     /* Hide the CTA button style on mobile to make it look like a tab */
+    /* CTA Button on Mobile - Keep it popping */
     .nav__link--cta {
-        background-color: transparent;
-        color: var(--color-text-light) !important;
-        padding: 0.75rem 1.2rem;
-        border-radius: 0;
+        /* Keep gradient from desktop */
+        font-size: 0.8rem;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        margin-right: 0.5rem; /* spacing from theme toggle */
     }
 
     .nav__link--cta.active {
-        color: #1ABC9C !important;
+         /* No special active state needed for button */
+         color: var(--color-white) !important;
     }
 
     .nav__link--cta:hover {
-        background-color: transparent;
-        transform: none;
+        transform: translateY(-2px);
     }
 
     .slider__btn {
