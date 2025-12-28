@@ -363,8 +363,15 @@
     </main>
 
     <footer class="footer">
+        <!-- Mobile Footer Tabs -->
+        <div class="footer__mobile-tabs">
+            <button class="footer-tab active" data-target="weather" aria-label="Weather"><i class="fas fa-cloud-sun"></i></button>
+            <button class="footer-tab" data-target="music" aria-label="Music"><i class="fas fa-music"></i></button>
+            <button class="footer-tab" data-target="timezone" aria-label="Timezone"><i class="fas fa-globe"></i></button>
+        </div>
+
         <div class="footer__content">
-            <div class="footer__left">
+            <div class="footer__section footer__left active" id="footer-weather">
                 <div class="weather-widget" id="weather-widget">
                     <div class="weather-location">
                         <i class="fas fa-map-marker-alt"></i>
@@ -382,22 +389,26 @@
                     </div>
                 </div>
             </div>
-            <div class="music-player" id="music-container">
-                <img src="img/music_Comptine.jpg" alt="Album Cover" id="cover" class="music-cover">
-                <div class="music-info">
-                    <h4 id="title">Comptine d'un autre été</h4>
-                    <div class="progress-container" id="progress-container">
-                        <div class="progress" id="progress"></div>
+            
+            <div class="footer__section footer__center" id="footer-music">
+                <div class="music-player" id="music-container">
+                    <img src="img/music_Comptine.jpg" alt="Album Cover" id="cover" class="music-cover">
+                    <div class="music-info">
+                        <h4 id="title">Comptine d'un autre été</h4>
+                        <div class="progress-container" id="progress-container">
+                            <div class="progress" id="progress"></div>
+                        </div>
+                    </div>
+                    <audio src="./music/Comptine.mp3" id="audio"></audio>
+                    <div class="music-controls">
+                        <button id="prev" class="control-btn" aria-label="Previous song" title="Previous song"><i class="fas fa-backward"></i></button>
+                        <button id="play" class="control-btn play-btn" aria-label="Play/Pause" title="Play/Pause"><i class="fas fa-play"></i></button>
+                        <button id="next" class="control-btn" aria-label="Next song" title="Next song"><i class="fas fa-forward"></i></button>
                     </div>
                 </div>
-                <audio src="./music/Comptine.mp3" id="audio"></audio>
-                <div class="music-controls">
-                    <button id="prev" class="control-btn" aria-label="Previous song" title="Previous song"><i class="fas fa-backward"></i></button>
-                    <button id="play" class="control-btn play-btn" aria-label="Play/Pause" title="Play/Pause"><i class="fas fa-play"></i></button>
-                    <button id="next" class="control-btn" aria-label="Next song" title="Next song"><i class="fas fa-forward"></i></button>
-                </div>
             </div>
-            <div class="footer__right">
+
+            <div class="footer__section footer__right" id="footer-timezone">
                 <!-- Time Zone Widget Container -->
                 <div class="tz-container">
                     <button id="tz-trigger" class="tz-button">

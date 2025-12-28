@@ -7,6 +7,7 @@ import { initWeather } from "./modules/weather.js";
 import { init as initExpertise } from "./modules/expertise.js";
 import { initTimeline } from "./modules/timeline.js";
 import { initTimezone } from "./modules/timezone.js";
+import { initFooterTabs } from "./modules/footerTabs.js";
 
 // Initialize all modules when DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
@@ -17,4 +18,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initExpertise();
   initTimeline();
   initTimezone();
+  initFooterTabs();
 });
