@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://son-n-pham.github.io/sitemap.xml
