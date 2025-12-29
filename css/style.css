@@ -382,27 +382,43 @@ a {
     }
 }
 
-.card {
-    background: var(--glass-bg);
-    backdrop-filter: var(--glass-blur);
-    -webkit-backdrop-filter: var(--glass-blur);
-    border: 1px solid var(--glass-border);
-    padding: var(--spacing-lg);
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-    text-align: center;
-    transition: var(--transition);
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.25);
-}
-
 .card__icon img {
     height: 80px;
     margin-bottom: var(--spacing-md);
     filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+}
+
+@media (max-width: 480px) {
+    .cards-grid {
+        gap: 0.75rem;
+    }
+    
+    .card {
+        padding: 1rem;
+    }
+    
+    .card__icon img {
+        height: 50px;
+        margin-bottom: 0.5rem;
+    }
+    
+    .card__content h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.25rem;
+    }
+    
+    .card__content p {
+        font-size: 0.85rem;
+    }
+
+    .section__title {
+        margin-bottom: 0.5rem;
+        font-size: 1.4rem;
+    }
+
+    .slide {
+        padding: 1rem var(--spacing-md);
+    }
 }
 
 /* Expertise Section - 3D Flip Cards - Full Screen Layout */
@@ -1169,6 +1185,10 @@ a {
     color: rgba(255, 255, 255, 0.95);
 }
 
+.footer__mobile-tabs {
+    display: none;
+}
+
 .footer__content {
     display: flex;
     justify-content: space-between; /* Restore space-between for weather and player */
@@ -1574,27 +1594,10 @@ a {
 
     /* --- Footer Mobile Redesign --- */
     /* Hidden by default on desktop, shown in media query */
-    .footer__mobile-tabs {
-        display: none;
-    }
 
     .footer {
         padding: 0 0 10px 0;
         background: rgba(0, 0, 0, 0.9); /* Darker bg for better contrast */
-    }
-
-    /* Update layout variables for mobile */
-    :root {
-        --header-height: 100px; /* Approximate height of mobile header with tabs */
-        --footer-height: 140px; /* Approximate height of mobile footer with widgets */
-    }
-
-    .main-content {
-        /* Use dynamic viewport height to avoid browser bar issues */
-        height: calc(100dvh - var(--header-height) - var(--footer-height)); 
-        margin-top: var(--header-height);
-        /* Ensure no overlap */
-        padding-bottom: 0;
     }
 
     .footer__mobile-tabs {
