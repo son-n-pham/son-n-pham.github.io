@@ -15,9 +15,33 @@ export const initMusicPlayer = () => {
   let songIndex = 0;
 
   // Functions
+  const checkTitleOverflow = () => {
+    if (!title) return;
+    const container = title.parentElement;
+    if (!container) return;
+
+    // Reset title style to get accurate measurements
+    title.style.transform = 'translateX(0)';
+    
+    const scrollWidth = title.scrollWidth;
+    const clientWidth = container.clientWidth;
+
+    if (scrollWidth > clientWidth && clientWidth > 0) {
+      const distance = scrollWidth - clientWidth;
+      title.style.setProperty('--scroll-distance', `-${distance}px`);
+      container.classList.add('long-title');
+    } else {
+      container.classList.remove('long-title');
+    }
+  };
+
   const loadSong = (songId) => {
     const song = songList[songId];
-    if (title) title.innerText = song.title;
+    if (title) {
+      title.innerText = song.title;
+      // Small delay to allow DOM update before checking overflow
+      setTimeout(checkTitleOverflow, 50);
+    }
     if (audio) audio.src = `music/${song.file}.mp3`;
     if (cover) cover.src = `img/music_${song.file}.jpg`;
   };
@@ -95,4 +119,21 @@ export const initMusicPlayer = () => {
 
   // Song ends
   audio.addEventListener('ended', nextSong);
+
+  // Check overflow on resize
+  window.addEventListener('resize', checkTitleOverflow);
+
+  // Watch for tab switching to re-check overflow when music player becomes visible
+  const footerMusic = document.getElementById('footer-music');
+  if (footerMusic) {
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.attributeName === 'class' && footerMusic.classList.contains('active')) {
+          // Small delay to ensure layout is updated
+          setTimeout(checkTitleOverflow, 100);
+        }
+      });
+    });
+    observer.observe(footerMusic, { attributes: true });
+  }
 };
